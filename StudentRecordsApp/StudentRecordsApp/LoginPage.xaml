@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentRecordsApp.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+            <Entry x:Name="UsernameEntry" Placeholder="Username" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="true" />
+            <Button Text="Log In" TextColor="White" BackgroundColor="#003566" Margin="0,10,0,0" CornerRadius="7" HorizontalOptions="FillAndExpand" Clicked="OnLoginClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
