@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StudentRecordsApp.AddStudent">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="10" BackgroundColor="Beige">
             <Picker x:Name="YearLevelPicker"
-            Title="Select Year Level"
-            SelectedIndexChanged="OnYearLevelSelectedIndexChanged">
+                    Title="Select Year Level"
+                    SelectedIndexChanged="OnYearLevelSelectedIndexChanged">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>1</x:String>
@@ -28,3 +28,4 @@
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+

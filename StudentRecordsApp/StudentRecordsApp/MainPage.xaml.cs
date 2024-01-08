@@ -65,28 +65,29 @@ namespace StudentRecordsApp
         }
         private Frame CreateClassCard(ClassItem classItem)
         {
-            // Create a Frame for each class card
+            // Frame for each class card
             var frame = new Frame
             {
-                Padding = new Thickness(10),
-                Margin = new Thickness(0, 0, 0, 10),
+                Padding = new Thickness(20),
+                Margin = new Thickness(0, 0, 0, 20),
                 CornerRadius = 5,
-                BackgroundColor = Color.LightGray,
+                BackgroundColor = Color.Beige,
                 BindingContext = classItem // Set the BindingContext to hold the ClassItem
             };
 
-            // Create a Label to display the class name
+            // Label to display the class name
             var label = new Label
             {
                 Text = classItem.class_name,
                 FontSize = 18,
-                TextColor = Color.Black
+                TextColor = Color.Black,
+                FontAttributes = FontAttributes.Bold
             };
 
-            // Add the Label to the Frame
+            // Label to the Frame
             frame.Content = label;
 
-            // Add gesture recognizer for touch events
+            // Gesture recognizer for touch events
             var tapGestureRecognizer = new TapGestureRecognizer();
             var longPressGestureRecognizer = new PanGestureRecognizer();
 

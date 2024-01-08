@@ -1,16 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StudentRecordsApp.ClassStudents">
+             x:Class="StudentRecordsApp.ClassStudents"
+             Title="Student Lists">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Record Attendance" Clicked="OnRecordAttendanceClicked" HorizontalOptions="Start" Margin="10"/>
-            <Button Text="Add Student" Clicked="OnAddStudentClicked" HorizontalOptions="End" Margin="10"/>
-            <Label Text="Class Name" FontAttributes="Bold" TextColor="Red"/>
-            <Label x:Name="ClassNameLabel" TextColor="Red"/>
-            <Label Text="Student List" FontAttributes="Bold" Margin="0,10,0,0"/>
+        <StackLayout Padding="10">
+            
+            
+            <StackLayout Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Text="Class Name:" FontAttributes="Bold" FontSize="30"  />
+                <Label x:Name="ClassNameLabel" FontAttributes="Bold" FontSize="30" />
 
-            <Entry x:Name="SearchEntry" Placeholder="Search by name" TextChanged="OnSearchTextChanged" Margin="0,5,0,5" />
+                <StackLayout Orientation="Horizontal" Padding="31,0,10,0" >
+                    <Frame CornerRadius="60" BackgroundColor="White" Padding="0">
+                        <Button Text="Add Student" FontAttributes="Bold" Clicked="OnAddStudentClicked" HorizontalOptions="EndAndExpand" FontSize="12"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+            <Entry x:Name="SearchEntry" Placeholder="Search by Name" TextChanged="OnSearchTextChanged" Margin="0,5,0,5" />
             <Picker x:Name="GradeLevelPicker" Title="Select Year Level" SelectedIndexChanged="OnGradeLevelSelectedIndexChanged">
                 <Picker.Items>
                     <x:String>All Year Levels</x:String>
@@ -23,18 +31,18 @@
             </Picker>
             <!-- ListView to display students -->
             <!-- ListView to display students -->
-            <ListView x:Name="StudentsListView" ItemSelected="OnItemSelected" RowHeight="60">
+            <ListView x:Name="StudentsListView" ItemSelected="OnItemSelected" RowHeight="80">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell >
                             <StackLayout Orientation="Horizontal" Padding="10">
                                 <!-- Image for the left side -->
                                 <Image Source="https://static.vecteezy.com/system/resources/previews/009/734/564/original/default-avatar-profile-icon-of-social-media-user-vector.jpg"
-                    Aspect="AspectFill"
-                    HeightRequest="70"
-                    WidthRequest="50"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="Start" />
+                                       Aspect="AspectFill"
+                                       HeightRequest="70"
+                                       WidthRequest="50"
+                                       VerticalOptions="CenterAndExpand"
+                                       HorizontalOptions="Start" />
 
                                 <StackLayout>
                                     <!-- First Line -->
@@ -57,7 +65,8 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
+            <Button Text="Record Attendance" Clicked="OnRecordAttendanceClicked" HorizontalOptions="FillAndExpand" />
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

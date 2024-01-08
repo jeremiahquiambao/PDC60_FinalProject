@@ -20,6 +20,7 @@ C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\StudentRecordsApp.AssemblyInfoInputs.cache
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\StudentRecordsApp.AssemblyInfo.cs
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\StudentRecordsApp.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\StudentRecordsApp.sourcelink.json
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\StudentRecordsApp.dll
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\refint\StudentRecordsApp.dll

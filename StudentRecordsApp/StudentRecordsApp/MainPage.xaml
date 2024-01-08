@@ -1,16 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StudentRecordsApp.MainPage">
+             x:Class="StudentRecordsApp.MainPage"
+             Title="Courses">
 
     <StackLayout>
 
-        <Button Text="Add Course" Clicked="OnAddClassClicked" HorizontalOptions="End" Margin="10"/>
 
-        <Label Text="Courses" FontSize="Title" Padding="30,10,30,10"/>
+        <Image Source="https://cdni.iconscout.com/illustration/premium/thumb/education-3727510-3135812.png?f=webp" 
+               HeightRequest="250" WidthRequest="100"></Image>
 
-        <!-- Add a StackLayout to contain the cards -->
-        <StackLayout x:Name="ClassesStackLayout" Padding="10">
+        <Button Text="Add Course" Clicked="OnAddClassClicked" HorizontalOptions="FillAndExpand" Margin="10" FontAttributes="Bold"/>
+
+        <Label Text="Courses" FontSize="Title" Padding="20,10,30,0"/>
+
+        <!-- StackLayout to contain the cards -->
+        <StackLayout x:Name="ClassesStackLayout" Padding="10,10,10,5">
 
         </StackLayout>
     </StackLayout>
