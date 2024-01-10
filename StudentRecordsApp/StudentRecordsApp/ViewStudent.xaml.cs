@@ -16,11 +16,11 @@ namespace StudentRecordsApp
     public partial class ViewStudent : ContentPage
     {
         private string studentId;
-        public const string student_searchid = "http://192.168.100.99/StudentRecordsAPI/student-searchID.php";
-        public const string history_search = "http://192.168.100.99/StudentRecordsAPI/history-search.php";
-        public const string history_delete = "http://192.168.100.99/StudentRecordsAPI/history-delete.php";
-        public const string attendance_read = "http://192.168.100.99/StudentRecordsAPI/attendance-read.php";
-        public const string attendance_delete = "http://192.168.100.99/StudentRecordsAPI/attendance-delete.php";
+        public const string student_searchid = "http://192.168.100.135/StudentRecordsAPI/student-searchID.php";
+        public const string history_search = "http://192.168.100.135/StudentRecordsAPI/history-search.php";
+        public const string history_delete = "http://192.168.100.135/StudentRecordsAPI/history-delete.php";
+        public const string attendance_read = "http://192.168.100.135/StudentRecordsAPI/attendance-read.php";
+        public const string attendance_delete = "http://192.168.100.135/StudentRecordsAPI/attendance-delete.php";
 
         public ViewStudent(string studentId)
         {
@@ -209,7 +209,6 @@ namespace StudentRecordsApp
                 System.Diagnostics.Debug.WriteLine($"Exception: {ex}");
             }
         }
-
         private async void OnEditAttendanceClicked(object sender, EventArgs e)
         {
             var menuItem = sender as MenuItem;
@@ -221,7 +220,6 @@ namespace StudentRecordsApp
                 await Navigation.PushAsync(new EditAttendance(selectedAttendance.id));
             }
         }
-
         private async void OnDeleteAttendanceClicked(object sender, EventArgs e)
         {
             var menuItem = sender as MenuItem;
@@ -241,7 +239,6 @@ namespace StudentRecordsApp
                 // If the user clicks "No", you can handle it accordingly
             }
         }
-
         // Implement the logic to delete attendance
         private async Task DeleteAttendance(string id)
         {

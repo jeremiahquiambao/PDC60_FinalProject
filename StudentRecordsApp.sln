@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRecordsApp.Android", "StudentRecordsApp\StudentRecordsApp.Android\StudentRecordsApp.Android.csproj", "{1B7D646D-C353-4075-8B5A-85E56E2D9F9F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2786BF50-5F0C-4879-8839-B2B35B57E71D} = {2786BF50-5F0C-4879-8839-B2B35B57E71D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRecordsApp.iOS", "StudentRecordsApp\StudentRecordsApp.iOS\StudentRecordsApp.iOS.csproj", "{2786BF50-5F0C-4879-8839-B2B35B57E71D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRecordsApp", "StudentRecordsApp\StudentRecordsApp\StudentRecordsApp.csproj", "{87EB35AD-773C-4B63-A7E9-F72BFAAB606D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentRecordsApp", "StudentRecordsApp\StudentRecordsApp\StudentRecordsApp.csproj", "{87EB35AD-773C-4B63-A7E9-F72BFAAB606D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

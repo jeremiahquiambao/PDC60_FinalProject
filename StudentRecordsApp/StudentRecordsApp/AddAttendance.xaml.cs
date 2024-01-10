@@ -15,8 +15,8 @@ namespace StudentRecordsApp
     public partial class AddAttendance : ContentPage
     {
         private List<AttendanceRecord> attendanceRecords = new List<AttendanceRecord>();
-        public const string attendance_add = "http://192.168.100.99/StudentRecordsAPI/attendance-add.php";
-        public const string class_update = "http://192.168.100.99/StudentRecordsAPI/class-students.php";
+        public const string attendance_add = "http://192.168.100.135/StudentRecordsAPI/attendance-add.php";
+        public const string class_update = "http://192.168.100.135/StudentRecordsAPI/class-students.php";
         private string classId;
         public AddAttendance(string classId)
         {

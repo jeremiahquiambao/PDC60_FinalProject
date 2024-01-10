@@ -18,7 +18,7 @@ namespace StudentRecordsApp
         public string id { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }
-        public string date_of_birth { get; set; } // Add this line
+        public string date_of_birth { get; set; } 
         public string email { get; set; }
         public string phone { get; set; }
         public string address { get; set; }
@@ -29,8 +29,8 @@ namespace StudentRecordsApp
     public partial class EditStudent : ContentPage
     {
         private string studentId;
-        public const string student_searchid = "http://192.168.100.99/StudentRecordsAPI/student-searchID.php";
-        public const string student_update = "http://192.168.100.99/StudentRecordsAPI/student-update.php";
+        public const string student_searchid = "http://192.168.100.135/StudentRecordsAPI/student-searchID.php";
+        public const string student_update = "http://192.168.100.135/StudentRecordsAPI/student-update.php";
         public EditStudent(string studentId)
         {
             InitializeComponent();

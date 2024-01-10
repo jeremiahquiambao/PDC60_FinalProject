@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
+
 using System.Net.Http;
 using Newtonsoft.Json;
 
@@ -12,8 +12,8 @@ namespace StudentRecordsApp
 {
     public partial class MainPage : ContentPage
     {
-        public const string class_retrieve = "http://192.168.100.99/StudentRecordsAPI/class-readall.php";
-        public const string class_delete = "http://192.168.100.99/StudentRecordsAPI/class-delete.php";
+        public const string class_retrieve = "http://192.168.100.135/StudentRecordsAPI/class-readall.php";
+        public const string class_delete = "http://192.168.100.135/StudentRecordsAPI/class-delete.php";
         //private Label errorLabel;
 
         public MainPage()
@@ -26,6 +26,7 @@ namespace StudentRecordsApp
         {
             base.OnAppearing();
             FetchClasses();
+            System.Diagnostics.Debug.WriteLine($"MainPage Style: {Style}");
         }
         private async void FetchClasses()
         {
@@ -69,7 +70,7 @@ namespace StudentRecordsApp
             var frame = new Frame
             {
                 Padding = new Thickness(20),
-                Margin = new Thickness(0, 0, 0, 20),
+                Margin = new Thickness(0, 0, 0, 2),
                 CornerRadius = 5,
                 BackgroundColor = Color.Beige,
                 BindingContext = classItem // Set the BindingContext to hold the ClassItem

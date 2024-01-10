@@ -20,7 +20,7 @@ namespace StudentRecordsApp
     public partial class AddHistory : ContentPage
     {
         private string studentId;
-        public const string history_add = "http://192.168.100.99/StudentRecordsAPI/history-add.php";
+        public const string history_add = "http://192.168.100.135/StudentRecordsAPI/history-add.php";
         public AddHistory(string studentId)
         {
             InitializeComponent();

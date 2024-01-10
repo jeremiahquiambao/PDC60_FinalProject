@@ -16,8 +16,8 @@ namespace StudentRecordsApp
     public partial class EditAttendance : ContentPage
     {
         private string attendanceId;
-        public const string attendance_update = "http://192.168.100.99/StudentRecordsAPI/attendance-update.php";
-        public const string attendance_searchId = "http://192.168.100.99/StudentRecordsAPI/attendance-searchID.php";
+        public const string attendance_update = "http://192.168.100.135/StudentRecordsAPI/attendance-update.php";
+        public const string attendance_searchId = "http://192.168.100.135/StudentRecordsAPI/attendance-searchID.php";
         public EditAttendance(string attendanceId)
         {
             InitializeComponent();

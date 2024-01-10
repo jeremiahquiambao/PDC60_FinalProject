@@ -9,8 +9,6 @@ namespace StudentRecordsApp
         public App()
         {
             InitializeComponent();
-
-            //MainPage = new NavigationPage(new CarouselPage());
             MainPage = new NavigationPage(new MainPage());
         }
 

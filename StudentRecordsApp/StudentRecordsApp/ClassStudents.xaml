@@ -3,57 +3,85 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StudentRecordsApp.ClassStudents"
              Title="Student Lists">
+
+    <ContentPage.Style>
+        <Style TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="{StaticResource AppBackgroundColor}" />
+        </Style>
+    </ContentPage.Style>
+
     <ContentPage.Content>
         <StackLayout Padding="10">
             
-            
-            <StackLayout Orientation="Horizontal" Margin="0,5,0,0">
+            <!-- StackLayout for Class Name-->
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
                 <Label Text="Class Name:" FontAttributes="Bold" FontSize="30"  />
                 <Label x:Name="ClassNameLabel" FontAttributes="Bold" FontSize="30" />
-
-                <StackLayout Orientation="Horizontal" Padding="31,0,10,0" >
-                    <Frame CornerRadius="60" BackgroundColor="White" Padding="0">
-                        <Button Text="Add Student" FontAttributes="Bold" Clicked="OnAddStudentClicked" HorizontalOptions="EndAndExpand" FontSize="12"/>
-                    </Frame>
-                </StackLayout>
             </StackLayout>
 
-            <Entry x:Name="SearchEntry" Placeholder="Search by Name" TextChanged="OnSearchTextChanged" Margin="0,5,0,5" />
-            <Picker x:Name="GradeLevelPicker" Title="Select Year Level" SelectedIndexChanged="OnGradeLevelSelectedIndexChanged">
-                <Picker.Items>
-                    <x:String>All Year Levels</x:String>
-                    <x:String>1st Year</x:String>
-                    <x:String>2nd Year</x:String>
-                    <x:String>3rd Year</x:String>
-                    <x:String>4th Year</x:String>
-                    <x:String>5th Year</x:String>
-                </Picker.Items>
-            </Picker>
+            <!-- Grid for Seach -->
+            <Grid HeightRequest="90">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Entry for Search -->
+                <Entry x:Name="SearchEntry" Placeholder="Search by Name" PlaceholderColor="#b3a89b" TextChanged="OnSearchTextChanged" Grid.Column="0" />
+
+                <!-- Picker for Year Level -->
+                <Picker x:Name="GradeLevelPicker" Title="Select Year Level" TextColor="#b3a89b" SelectedIndexChanged="OnGradeLevelSelectedIndexChanged" Grid.Column="1" >
+                    <Picker.Items>
+                        <x:String>All Year Levels</x:String>
+                        <x:String>1st Year</x:String>
+                        <x:String>2nd Year</x:String>
+                        <x:String>3rd Year</x:String>
+                        <x:String>4th Year</x:String>
+                        <x:String>5th Year</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+            
+            <!-- StackLayout for Add Student & Add Attendance-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="10,20,10,10" >
+                <Label Text="+ Add Student" FontAttributes="Bold" FontSize="20" TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnAddStudentClicked"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label Text="+ Add Attendance" FontAttributes="Bold" FontSize="20" TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnRecordAttendanceClicked"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            
             <!-- ListView to display students -->
-            <!-- ListView to display students -->
-            <ListView x:Name="StudentsListView" ItemSelected="OnItemSelected" RowHeight="80">
+            <ListView x:Name="StudentsListView" ItemSelected="OnItemSelected" RowHeight="80" BackgroundColor="#6e5a42" SeparatorColor="#b3a89b">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell >
-                            <StackLayout Orientation="Horizontal" Padding="10">
+                            <StackLayout Orientation="Horizontal" Padding="10" >
                                 <!-- Image for the left side -->
-                                <Image Source="https://static.vecteezy.com/system/resources/previews/009/734/564/original/default-avatar-profile-icon-of-social-media-user-vector.jpg"
-                                       Aspect="AspectFill"
-                                       HeightRequest="70"
-                                       WidthRequest="50"
+                                <Image Source="https://static.vecteezy.com/system/resources/previews/021/079/672/original/user-account-icon-for-your-design-only-free-png.png"
+                                       HeightRequest="80"
+                                       WidthRequest="60"
                                        VerticalOptions="CenterAndExpand"
-                                       HorizontalOptions="Start" />
+                                       HorizontalOptions="Start" 
+                                       BackgroundColor="Silver"/>
 
                                 <StackLayout>
                                     <!-- First Line -->
-                                    <Label Text="{Binding full_name}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding full_name}" FontAttributes="Bold" TextColor="#fefefe"/>
 
                                     <!-- Second Line (Details) -->
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding year_level}" />
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label Text="{Binding year_level}" TextColor="#b3a89b" />
                                         <!-- <Label Text="{Binding phone}" Margin="10,0,0,0" /> -->
                                     </StackLayout>
                                 </StackLayout>
+
                             </StackLayout>
 
                             <!-- Context Actions -->
@@ -65,7 +93,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Record Attendance" Clicked="OnRecordAttendanceClicked" HorizontalOptions="FillAndExpand" />
             
         </StackLayout>
     </ContentPage.Content>

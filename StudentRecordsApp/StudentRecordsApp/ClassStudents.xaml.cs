@@ -16,9 +16,9 @@ namespace StudentRecordsApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ClassStudents : ContentPage
     {
-        public const string class_update = "http://192.168.100.99/StudentRecordsAPI/class-students.php";
-        public const string student_delete = "http://192.168.100.99/StudentRecordsAPI/student-delete.php";
-        public const string student_search = "http://192.168.100.99/StudentRecordsAPI/student-search.php";
+        public const string class_update = "http://192.168.100.135/StudentRecordsAPI/class-students.php";
+        public const string student_delete = "http://192.168.100.135/StudentRecordsAPI/student-delete.php";
+        public const string student_search = "http://192.168.100.135/StudentRecordsAPI/student-search.php";
         private string classId;
         public ClassStudents(string classId, string className)
         {
@@ -30,7 +30,6 @@ namespace StudentRecordsApp
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            // Refresh data when the page appears
             RefreshData();
         }
 
@@ -154,6 +153,7 @@ namespace StudentRecordsApp
             // Navigate to the EditStudent page and pass only the student ID as a parameter
             await Navigation.PushAsync(new EditStudent(student.id));
         }
+
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             // Handle item selection if needed
@@ -169,6 +169,7 @@ namespace StudentRecordsApp
             // Deselect the item to remove the highlight
             StudentsListView.SelectedItem = null;
         }
+
         private async void OnRecordAttendanceClicked(object sender, EventArgs e)
         {
             // Navigate to the AddAttendance page and pass the classId as a parameter
@@ -203,7 +204,6 @@ namespace StudentRecordsApp
             // Call the API with the updated grade level
             FetchStudents(classId, SearchEntry.Text, gradeLevel);
         }
-
     }
 
     public class StudentsResponse

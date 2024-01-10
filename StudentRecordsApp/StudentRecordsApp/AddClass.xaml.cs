@@ -14,7 +14,7 @@ namespace StudentRecordsApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddClass : ContentPage
     {
-        public const string class_add = "http://192.168.100.99/StudentRecordsAPI/class-add.php";
+        public const string class_add = "http://192.168.100.135/StudentRecordsAPI/class-add.php";
         public AddClass()
         {
             InitializeComponent();

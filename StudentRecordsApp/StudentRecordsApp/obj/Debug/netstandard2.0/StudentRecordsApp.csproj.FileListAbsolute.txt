@@ -9,12 +9,10 @@ C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\AddHistory.xaml.g.cs
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\AddStudent.xaml.g.cs
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\CarouselPage.xaml.g.cs
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\ClassStudents.xaml.g.cs
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\EditAttendance.xaml.g.cs
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\EditClass.xaml.g.cs
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\EditStudent.xaml.g.cs
-C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\LoginPage.xaml.g.cs
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\ViewStudent.xaml.g.cs
 C:\Users\Acer\source\repos\StudentRecordsApp\StudentRecordsApp\StudentRecordsApp\obj\Debug\netstandard2.0\StudentRecordsApp.AssemblyInfoInputs.cache

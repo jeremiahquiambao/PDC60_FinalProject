@@ -28,9 +28,8 @@ namespace StudentRecordsApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditClass : ContentPage
     {
-        public const string class_searchid = "http://192.168.100.99/StudentRecordsAPI/class-searchID.php";
-        public const string class_update = "http://192.168.100.99/StudentRecordsAPI/class-update.php";
-
+        public const string class_searchid = "http://192.168.100.135/StudentRecordsAPI/class-searchID.php";
+        public const string class_update = "http://192.168.100.135/StudentRecordsAPI/class-update.php";
         private string classId;
 
         public EditClass(string classId)

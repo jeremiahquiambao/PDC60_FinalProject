@@ -2,22 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StudentRecordsApp.MainPage"
-             Title="Courses">
+             Title="Student Records Application">
+
+    <ContentPage.Style>
+        <Style TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="{StaticResource AppBackgroundColor}" />
+        </Style>
+    </ContentPage.Style>
+
 
     <StackLayout>
-
-
+        
         <Image Source="https://cdni.iconscout.com/illustration/premium/thumb/education-3727510-3135812.png?f=webp" 
                HeightRequest="250" WidthRequest="100"></Image>
 
-        <Button Text="Add Course" Clicked="OnAddClassClicked" HorizontalOptions="FillAndExpand" Margin="10" FontAttributes="Bold"/>
 
-        <Label Text="Courses" FontSize="Title" Padding="20,10,30,0"/>
+        <Label Text="Courses" FontSize="Title" Padding="20,0,30,0"/>
 
         <!-- StackLayout to contain the cards -->
         <StackLayout x:Name="ClassesStackLayout" Padding="10,10,10,5">
 
         </StackLayout>
+        
+        <Button Text="Add Course" Clicked="OnAddClassClicked" HorizontalOptions="Center" Margin="10" FontAttributes="Bold" FontSize="15" CornerRadius="5"/>
+
+
     </StackLayout>
 
 </ContentPage>
