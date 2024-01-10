@@ -79,31 +79,6 @@ if (mysqli_query($dbconnect, $query)) {
     echo "Error creating table 'Attendance': " . mysqli_error($dbconnect) . "<br>";
 }
 
-// Table 5: Users
-$query = "CREATE TABLE IF NOT EXISTS Users (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50),
-    password VARCHAR(255)
-)";
-
-if (mysqli_query($dbconnect, $query)) {
-    echo "Table 'Users' created successfully<br>";
-
-    // Insert default user
-    $username = "admin";
-    $password = "admin";
-
-    $insertQuery = "INSERT INTO Users (username, password) VALUES ('$username', '$password')";
-
-    if (mysqli_query($dbconnect, $insertQuery)) {
-        echo "Default user inserted successfully<br>";
-    } else {
-        echo "Error inserting default user: " . mysqli_error($dbconnect) . "<br>";
-    }
-} else {
-    echo "Error creating table 'Users': " . mysqli_error($dbconnect) . "<br>";
-}
-
 
 // Close the connection
 mysqli_close($dbconnect);
